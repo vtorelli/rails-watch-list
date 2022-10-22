@@ -1,0 +1,13 @@
+.banner-index {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 350px;
+  background-image: url(asset_path('cinema.jpg'));
+  background-size: cover;
+  background-position: center;
+
+  h1 {
+    color: white;
+  }
+}

@@ -1,5 +1,21 @@
-<% @lists.each do |list| %>
-  <%= link_to list.name, list_path(list) %>
-<% end %>
+<div class="wrapper">
+  <div class="banner-index">
+    <h1>welcome to your lists</h1>
+  </div>
 
-<%= link_to "create new list", new_list_path %>
+  <div class="list-index-content">
+    <% @lists.each do |list| %>
+
+      <%= link_to list_path(list) do %>
+        <div class="list-card-index">
+          <%= image_tag 'room', class: "image-list-cover", alt: "img" %>
+
+          <div class="list-card-content">
+            <%= list.name %>
+          </div>
+        </div>
+      <% end %>
+
+    <% end %>
+  </div>
+</div>
